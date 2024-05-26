@@ -1,0 +1,17 @@
+3.c PROGRAM FOR SIMULATION OF LS UNIX COMMANDS
+
+#include<stdio.h>
+#include<dirent.h>
+main(int argc, char **argv)
+{
+DIR *dp;
+struct dirent *link;
+dp=opendir(argv[0]);
+printf("\n contents of the directory %s are \n", argv[0]);
+while((link=readdir(dp))!=0)
+printf("%s",link->d_name);
+closedir(dp);
+}
+OUTPUT
+contents of the directory /tmp/cNwVS65Xdb.o
+ls sample.doc xx.doc name cse
